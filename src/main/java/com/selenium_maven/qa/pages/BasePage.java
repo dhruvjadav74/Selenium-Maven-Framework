@@ -24,7 +24,7 @@ public class BasePage {
 	}
 
 	protected void click(By by) {
-		WebElement element = waitForElementToBeVisible(by);
+		WebElement element = findElement(by);
 		element.click();
 	}
 
@@ -40,7 +40,7 @@ public class BasePage {
 	}
 
 	protected void sendKeys(By by, String inputtext) {
-		WebElement element = waitForElementToBeVisible(by);
+		WebElement element = driver.findElement(by);
 		element.sendKeys(inputtext);
 	}
 

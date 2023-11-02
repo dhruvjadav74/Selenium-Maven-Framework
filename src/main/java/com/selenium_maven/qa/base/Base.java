@@ -22,7 +22,7 @@ public class Base {
 	public Base() {
 		prop = new Properties();
 		File propFile = new File(
-				System.getProperty("user.dir") + "\\src\\main\\java\\com\\irctc\\qa\\config\\Config.properties");
+				System.getProperty("user.dir") + "\\src\\main\\java\\com\\selenium_maven\\qa\\config\\Config.properties");
 		try {
 			FileInputStream fis = new FileInputStream(propFile);
 			prop.load(fis);
