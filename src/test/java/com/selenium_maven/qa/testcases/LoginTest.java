@@ -32,6 +32,7 @@ public class LoginTest extends Base {
 		loginPage.clickLogin();
 		Thread.sleep(2000);
 		loginPage.navigateToContactsPageAndCreate();
+		Thread.sleep(2000);
 	}
 	
 	@Test
