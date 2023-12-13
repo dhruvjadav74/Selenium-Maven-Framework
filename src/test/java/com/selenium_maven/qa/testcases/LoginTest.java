@@ -8,6 +8,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.selenium_maven.qa.pages.LoginPage;
+
+import io.qameta.allure.Step;
+
 import com.selenium_maven.qa.base.Base;
 
 public class LoginTest extends Base {
@@ -26,18 +29,16 @@ public class LoginTest extends Base {
 		loginPage = new LoginPage(driver);
 	}
 	
+	@Step("Login Test Case")
 	@Test
 	public void Checklogin() throws InterruptedException {
 		loginPage.enterUsernameAndPassword();
 		loginPage.clickLogin();
 		Thread.sleep(2000);
 		loginPage.navigateToContactsPageAndCreate();
+		Thread.sleep(2000);
 	}
 	
-	@Test
-	public void enterContactDetails() {
-		
-	}
 
 	@AfterClass
 	public void tearDown() {
