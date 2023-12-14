@@ -35,12 +35,15 @@ public class Base {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--remote-allow-origins=*");
 			driver = new FirefoxDriver(options);
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			EdgeOptions options = new EdgeOptions();
+			options.addArguments("--remote-allow-origins=*");
 			driver = new EdgeDriver(options);
 		}
 		System.out.println("Added");

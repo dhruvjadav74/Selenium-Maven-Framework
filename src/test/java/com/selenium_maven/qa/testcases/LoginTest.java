@@ -2,16 +2,16 @@ package com.selenium_maven.qa.testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
+
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.Test;
 
+import com.selenium_maven.qa.base.Base;
 import com.selenium_maven.qa.pages.LoginPage;
 
 import io.qameta.allure.Step;
 
-import com.selenium_maven.qa.base.Base;
 
 public class LoginTest extends Base {
 	
@@ -39,10 +39,10 @@ public class LoginTest extends Base {
 		Thread.sleep(2000);
 	}
 	
-
 	@AfterClass
-	public void tearDown() {
-		driver.quit();
+	public void tearDown() throws InterruptedException {
+		Thread.sleep(1000);
+		driver.close();
 	}
 	
 	
