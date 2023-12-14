@@ -41,8 +41,7 @@ public class LoginTest extends Base {
 	
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
-	
+		driver.close();
 	}
 	
 	
