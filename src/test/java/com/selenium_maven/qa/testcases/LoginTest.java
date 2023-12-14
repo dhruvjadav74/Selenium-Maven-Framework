@@ -7,11 +7,11 @@ import org.testng.annotations.BeforeClass;
 
 import org.testng.annotations.Test;
 
+import com.selenium_maven.qa.base.Base;
 import com.selenium_maven.qa.pages.LoginPage;
 
 import io.qameta.allure.Step;
 
-import com.selenium_maven.qa.base.Base;
 
 public class LoginTest extends Base {
 	
