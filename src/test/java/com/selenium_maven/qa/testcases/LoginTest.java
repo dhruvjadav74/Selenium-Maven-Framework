@@ -27,7 +27,7 @@ public class LoginTest extends Base {
 	public void navigateToBaseUrl() {
 		driver = intializeBrowser(prop.getProperty("browser"));
 		loginPage = new LoginPage(driver);
-		//added comment
+		
 	}
 	
 	@Step("Login Test Case")
