@@ -2,9 +2,9 @@ package com.selenium_maven.qa.testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
+
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.Test;
 
 import com.selenium_maven.qa.pages.LoginPage;
@@ -39,10 +39,10 @@ public class LoginTest extends Base {
 		Thread.sleep(2000);
 	}
 	
-
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
+	
 	}
 	
 	
