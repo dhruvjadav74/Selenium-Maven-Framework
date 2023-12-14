@@ -2,9 +2,9 @@ package com.selenium_maven.qa.testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.selenium_maven.qa.base.Base;
@@ -23,7 +23,7 @@ public class LoginTest extends Base {
 	public WebDriver driver;
 	LoginPage loginPage;
 
-	@BeforeClass
+	@BeforeTest
 	public void navigateToBaseUrl() {
 		driver = intializeBrowser(prop.getProperty("browser"));
 		loginPage = new LoginPage(driver);
@@ -39,7 +39,7 @@ public class LoginTest extends Base {
 		Thread.sleep(2000);
 	}
 	
-	@AfterClass
+	@AfterTest
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(1000);
 		driver.close();
