@@ -40,7 +40,8 @@ public class LoginTest extends Base {
 	}
 	
 	@AfterClass
-	public void tearDown() {
+	public void tearDown() throws InterruptedException {
+		Thread.sleep(1000);
 		driver.close();
 	}
 	
