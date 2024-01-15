@@ -32,26 +32,5 @@ public class Utilities {
 
 	public static final int IMPLICIT_WAIT_TIME = 10;
 	public static final int PAGE_WAIT_TIME = 5;
-
-	public static String captureScreenshot(WebDriver driver, String testName) {
-		File srsScreenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String destinationScreenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + testName + ".png";
-		try {
-			FileHandler.copy(srsScreenshot, new File(destinationScreenshotPath));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return destinationScreenshotPath;
-	}
-	
-	public static String captureScreenshotBase64(WebDriver driver, String testName) throws IOException {
-		File srsScreenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String destinationScreenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + testName + ".png";
-		FileHandler.copy(srsScreenshot, new File(destinationScreenshotPath));
-		IOUtils.toByteArray(new FileInputStream(destinationScreenshotPath));
-		byte[] imageBytes = IOUtils.toByteArray(new FileInputStream(destinationScreenshotPath));
-		return Base64.getEncoder().encodeToString(imageBytes);
-	}
-
 	
 }
