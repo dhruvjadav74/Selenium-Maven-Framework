@@ -1,6 +1,7 @@
 package com.selenium_maven.qa.testcases;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -35,7 +36,7 @@ public class LoginTest extends Base {
 		Thread.sleep(2000);
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(1000);
 		driver.close();
